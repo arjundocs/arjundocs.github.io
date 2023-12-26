@@ -1,90 +1,831 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recording my Juarney.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun Documents</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-<body>
+        body {
+            min-height: 100vh;
+            background-color: #000000;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    <img id="profileImage" src="images/person_logo.png" alt="Arjun's Profile Picture">
-    <h1 id="haddingText">Document my Juarney.</h1>
+        nav {
+            background-color: rgb(11, 11, 11);
+            box-shadow: 3px 3px 5px rgba(83, 80, 80, 0.1);
+        }
 
-    <h3>join my Coummuniy and get Access </h3>
-    <h3>New Futures and more</h3>
+        nav ul {
+            height: 50px;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
 
-    <div class="button-container">
-        <button id="button1">Discrod</button>
-        <button id="button2">Whatapp</button>
-    </div>
+        nav li {
+            margin-left: 0px;
+            /* margin-right: 00px; */
+            /* margin-left: 101px;  */
+        }
 
-    <h2>Download my Projects</h2>
-    <h4>to clicking project button to Download my Project..</h2>
+        nav a {
+            height: 100%;
+            /* padding: 0 30px; */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            border: 50px;
+
+        }
+
+        nav a:hover {
+            background-color: #f0f0f000;
+            color: #3d3939;
+        }
+
+        nav li:first-child {
+            /* height: 10px; */
+            margin-right: auto;
+        }
+
+        nav li:first-child img {
+            margin-top: 20px;
+            height: 50px;
+            /* margin-left: 300px; */
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: rgba(79, 74, 74, 0.881);
+            /* backdrop-filter: blur(10px); */
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar li {
+            width: 100%;
+            /* margin-right: -300px; */
+        }
+
+        .sidebar a {
+            width: 100%;
+        }
+
+        .menu-button {
+            display: none;
+        }
 
 
-        <div class="button-container">
-            <button id="button1">Discrod</button>
-            <button id="button2">Whatapp</button>
-            <button id="button2">Whatapp</button>
-        </div>
-        <div class="button-container">
-            <button id="button1">Discrod</button>
-            <button id="button2">Whatapp</button>
-            <button id="button2">Whatapp</button>
+        @media(min-width: 800px) {
 
-        </div>
-
-        <div class="button-container">
+            nav {
+                padding-left: 300px;
+                padding-right: 300px;
+                padding-top: 8px;
+                padding-bottom: 20px;
+                background-color: rgb(11, 11, 11);
+                box-shadow: 3px 3px 5px rgba(83, 80, 80, 0.1);
+            }
 
 
-            <div class="box">
-                <h2>Box 1</h2>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </div>
+        }
 
-            <div class="box">
-                <h2>Box 1</h2>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </div>
 
-            <div class="box">
-                <h2>Box 1</h2>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </div>
+        @media(max-width: 800px) {
+            .hideOnMobile {
+                display: none;
+            }
 
-        </div>
+            .menu-button {
+                display: block;
+                margin-right: -7.5px;
+            }
+
+            nav {
+                padding-left: 10px;
+                padding-right: 0px;
+                /* padding-bottom: 4px;
+            margin-bottom: 10px; */
+                padding-bottom: 12px;
+                background-color: rgb(11, 11, 11);
+                box-shadow: 3px 3px 5px rgba(83, 80, 80, 0.1);
+            }
+
+            */ nav li:first-child img {
+                margin-top: 30px;
+                height: 50px;
+                margin-left: 50px;
+                margin-right: 400px;
+            }
+
+        }
+
+        /* @media(max-width: 400px) {
+
+            .sidebar {
+                width: 100%;
+            }
+        } */
+
+        body {
+            /* font-family: 'Arial', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        header img{
+            margin-bottom: 3px;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        img {
+            /* border-radius: 50%; */
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        .project-card {
+            background-color: #3d3939;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card-main {
+            background-color: #474040;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            /* Adjusted margin for spacing */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            /* Takes full width */
+            box-sizing: border-box;
+            display: block;
+            /* Ensures each card is displayed on a new line */
+        }
+
+        .project-card img {
+            max-width: 30px;
+            height: 20px;
+            border-radius: 1px;
+        }
+
+        a {
+            margin-top: 20px;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 10px;
+        }
+
+        a sm {
+            margin-top: 20px;
+            /* color: #fff; */
+            text-decoration: none;
+            display: flex;
+            padding: 8px 16px;
+            /* border: 1px solid #fff; */
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 10px;
+        }
+
+        a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        a sm:hover {
+            background-color: #902f2f;
+            color: #000;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .skills {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: 5px 0;
+        }
+
+        .skills li {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .scm {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        .scm li {
+            text-align: center;
+        }
+
+        .social-media {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .building-projects {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: 5px, 0;
+        }
+
+        .building-projects li {
+            /* text-align: center; */
+            margin: 10px;
+        }
+
+        /* Adjustments for the Follow Me on Social Media section */
+        #social-media {
+            text-align: center;
+            /* Center-align the social media icons */
+        }
+
+        .social-media {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-media li {
+            margin: 0 10px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            /* padding: 8px; */
+        }
+
+
+        .social-media img {
+            width: 30px;
+            /* Adjust the size of the social media icons */
+            height: auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .skills-logo {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #blogs {
+            margin: 20px 0;
+        }
+
+        .blog-item {
+            display: flex;
+            margin-bottom: 20px;
+            background: #282727;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .blog-image {
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .blog-content {
+            flex-grow: 1;
+        }
+
+        .blog-content h3 {
+            margin-top: 0;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #282727;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #d8d3d3;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            /* Adjustments for smaller screens */
+            .building-projects {
+                flex-direction: column;
+                /* Display projects in a column */
+            }
+
+            .building-projects li {
+                width: 100%;
+                /* Make each project take the full width */
+            }
+
+            .project-card-main {
+                width: auto;
+                /* Reset width to auto for responsiveness */
+            }
+
+            
+        }
+
+        .project-card-main1 {
+            background-color: #322222;
+            width: 100%;
+            /* Adjust the width as needed */
+            margin: 0px auto;
+            border: 4px;
+            padding-bottom: 20px;
+            border-radius: 6px;
+        }
+        .project-card-main1 h3{
+                padding-left: 15px;
+            }
+            .project-card-main1 p{
+                padding-left: 15px;
+            }
+            .project-card-main1 a{ 
+            align-items: center;
+            /* padding-left: 60px; */
+            margin-left: 15px;
+
+        }
+            .project-card-main1 img{
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        .fsm{
+                    text-align: center;
+                    margin: 10px;
+
+                
+                }
+
+        /* Existing styles */
+
+        @media screen and (max-width: 800px) {
+            .building-projects {
+                flex-direction: column;
+                align-items: center;
+                /* Center projects horizontally */
+            }
+
+            .building-projects li {
+                width: 100%;
+                /* text-align: center; */
+                /* Center project content */
+            }
         
-        <div class="blog-box">
-            <h2>Blog Post 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida urna eget nisi lobortis, non tincidunt ante lacinia.</p>
-        </div>
-    
-        <div class="blog-box">
-            <h2>Blog Post 2</h2>
-            <p>Sed euismod, velit id euismod lacinia, arcu mi scelerisque libero, at maximus urna ex non velit.</p>
-        </div>
+            .project-card-main1 {
+            
+                background-color: #322222;
+                width: 100%;
+                /* Adjust the width as needed */
+                margin: 0px auto;
+                border: 4px;
+                padding-bottom: 20px;
+                border-radius: 6px;
+            }
+            .project-card-main1 h3{
+                padding-left: 15px;
+            }
+            .project-card-main1 p{
+                padding-left: 15px;
+            }
+            .project-card-main1 a{ 
+            align-items: center;
+            /* padding-left: 60px; */
+            margin-left: 15px;
 
-</body>
+        }
+            .project-card-main1 img{
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        }
 
+        .h2blog{
+                        margin-bottom: 15px;
+                    }
+
+                @media screen and (max-width: 600px) {
+
+                    .h2blog{
+                        margin-bottom: 15px;
+                    }
+
+                    /* Adjustments for smaller screens */
+                .blog-item {
+                    flex-direction: column;
+                    /* Stack items vertically */
+                }
+
+                .blog-image {
+                    max-width: 100%;
+                    /* Make the image take full width */
+                    margin-bottom: 10px;
+                    /* Add space between image and content */
+                }
+
+                .blog-content {
+                    width: 100%;
+                    /* Make content take full width */
+                }
+
+                .read-more {
+                    margin-top: 10px;
+                    /* Add space between content and read more button */
+                }
+
+                .fsm{
+                    text-align: center;
+                    margin: 10px;
+
+                
+                }
+
+            }
+
+            h3 .follow {
+                text-align: center;
+            }
+
+            .follow {
+                align-items: center;
+                text-align: center;
+            }
+
+            follow-sc .h3 {
+                text-align: center;
+            }
+
+            .home1 {
+                background-color: red;
+            }
+
+            .m-logo {
+                margin-bottom: 200px;
+            }
+
+            .mainbar {
+                margin-right: 300px;
+            }
+
+            .bdesc{
+                align-items: center;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .h2contact{
+                margin-bottom: 20px;
+            }
+
+            footer{
+                background-color: #181717;
+            }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                        viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                            fill="#fff" />
+                    </svg></a></li>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="mainbar">
+            <li><img id="m-logo"
+                    src="https://firebasestorage.googleapis.com/v0/b/wallsprojects-d3371.appspot.com/o/ARJN.-removebg-preview.png?alt=media&token=f3d68e01-ef6b-4a19-925f-9fe0866b8073"
+                    alt="Logo"></li>
+            <li class="hideOnMobile"><a href="#">Home </a></li>
+            <li class="hideOnMobile"><a href="#">Products</a></li>
+            <li class="hideOnMobile"><a href="#">About</a></li>
+            <li id="contactid" class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#fff" />
+                    </svg>
+                </a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="container">
+            <img src="https://firebasestorage.googleapis.com/v0/b/rewardsq-3cef2.appspot.com/o/profile_pic.png?alt=media&token=5d7cd67b-5221-4b9a-a02a-33ccb909c817"
+                alt="Your Name" width="150">
+            <h3>Hello,How are You?</h3>
+
+            <h1>Building that Create Impacts.</h1>
+            <p>Consectetur adipisicing elit. Accusamus, error quaerat quidem iusto vel assumenda eveniet reprehenderit
+                ipsa labore tempore id commodi! Odit earum, unde quam in eum itaque officia.</p>
+            <a href="#" class="join-community">Join Community</a>
+        </div>
+    </header>
+
+    <section id="skills">
+        <div class="container">
+            <h2>ME EXPERIENCES</h2>
+            <ul class="skills">
+                <li><img src="https://img.icons8.com/?size=48&id=13679&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=ZoxjA0jZDdFZ&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=17836&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=7gdY5qNXaKC0&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=20909&format=png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="building-projects">
+        <div class="container">
+            <h2>BUILDING PROJECTS</h2>
+            <p class="bdesc">this building-projects</p>
+            <ul class="building-projects">
+                <li>
+                    <div class="project-card-main1">
+                        <img src="https://help.figma.com/hc/article_attachments/18924884984727" alt="Project 1">
+                        <h3>Artscreen: AI Generated Wallapapers</h3>
+                        <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Download</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-card-main1">
+                        <img src="https://help.figma.com/hc/article_attachments/18924884984727" alt="Project 1">
+                        <h3>DailyJuarnal: Write juarney in you Locial Storage.</h3>
+                        <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Download</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="building-projects">
+                <li>
+                    <div class="project-card-main1">
+                        <img src="https://help.figma.com/hc/article_attachments/18924884984727" alt="Project 1">
+                        <h3>Cemistory: Values & Play Cemistory Quizes.</h3>
+                        <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Download</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-card-main1">
+                        <img src="https://help.figma.com/hc/article_attachments/18924884984727" alt="Project 1">
+                        <h3>Vocablary: To Improve your vocablary</h3>
+                        <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Download</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>SHOWCASE PROJECTS</h2>
+            <!-- Building Projects -->
+            <div class="project-card-main">
+                <h3>Artscreen: AI Generated Wallapapers</h3>
+                <img src="https://help.figma.com/hc/article_attachments/18924884984727" alt="Project 1">
+                <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Download</a>
+            </div>
+            <div class="project-card-main">
+                <h3>Project 2</h3>
+                <img src="https://images.unsplash.com/opengraph/1x1.png?blend=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1575936123452-b67c3203c357%3Fblend%3D000000%26blend-alpha%3D10%26blend-mode%3Dnormal%26crop%3Dfaces%252Cedges%26h%3D630%26mark%3Dhttps%253A%252F%252Fimages.unsplash.com%252Fopengraph%252Fsearch-input.png%253Fh%253D84%2526txt%253Dimage%2526txt-align%253Dmiddle%25252Cleft%2526txt-clip%253Dellipsis%2526txt-color%253D000000%2526txt-pad%253D80%2526txt-size%253D40%2526txt-width%253D660%2526w%253D750%2526auto%253Dformat%2526fit%253Dcrop%2526q%253D60%26mark-align%3Dmiddle%252Ccenter%26mark-w%3D750%26w%3D1200%26auto%3Dformat%26fit%3Dcrop%26q%3D60%26ixid%3DM3wxMjA3fDB8MXxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8fHwxNzAzMDAwNzQzfDA%26ixlib%3Drb-4.0.3&blend-w=1&h=630&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&w=1200&auto=format&fit=crop&q=60"
+                    alt="Project 2">
+                <p>Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Download</a>
+            </div>
+            <div class="project-card-main">
+                <h3>Project 3</h3>
+                <img src="https://s3-alpha.figma.com/hub/file/4072859956/3393b8f4-01ec-450a-8e0d-c7125b2f57d1-cover.png"
+                    alt="Project 3">
+                <p>Description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Download</a>
+            </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Passionate Android Developer with a focus on creating user-friendly and innovative mobile applications.
+                Skilled in Java and Kotlin. Excited to contribute to the world of mobile development.</p>
+        </div>
+    </section>
+
+    <section id="blogs">
+        <div class="container">
+            <h2 class="h2blog">Latest Blogs</h2>
+
+            <div class="blog-item">
+                <img src="https://developermedia.com/wp-content/uploads/2019/09/what-should-a-tech-resource-hub-looks-like-1000px.jpg"
+                    alt="Blog 1" class="blog-image">
+                <div class="blog-content">
+                    <h3>Blog Title 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus eu odio hendrerit
+                        tristique. Sed aliquet neque vel ligula fermentum, in mattis quam malesuada.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="https://blog.hartman-technology.com/wp-content/uploads/2019/03/050318_LRR_MEN_WomenTech.jpg"
+                    alt="Blog 2" class="blog-image">
+                <div class="blog-content">
+                    <h3>Blog Title 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus eu odio hendrerit
+                        tristique. Sed aliquet neque vel ligula fermentum, in mattis quam malesuada.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl-iINukESRzHqQlsnsN5y0zQmwdOkNUpHsx2QCSvRSgLlo_u-j13AlK-MMkr6PcvvA40&usqp=CAU"
+                    alt="Blog 3" class="blog-image">
+                <div class="blog-content">
+                    <h3>Blog Title 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus eu odio hendrerit
+                        tristique. Sed aliquet neque vel ligula fermentum, in mattis quam malesuada.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="https://guardian.ng/wp-content/uploads/2016/01/WOMEN-IN-TECH.jpg" alt="Blog 4"
+                    class="blog-image">
+                <div class="blog-content">
+                    <h3>Blog Title 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus eu odio hendrerit
+                        tristique. Sed aliquet neque vel ligula fermentum, in mattis quam malesuada.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="h2contact">Contact Us</h2>
+            <p>Amet consectetur adipisicing elit. Beatae aut facilis non! Voluptate recusandae fugiat, voluptatum
+                praesentium quasi consectetur odit ad explicabo tempore provident omnis repellat modi aut obcaecati
+                laborum!</p>
+            <p>Email id: <b>recodreams@gmail.com</b></p>
+        </div>
+    </section>
+    </section>
+    <section id="follow-sc">
+        <div class="container">
+            <h4 class="fsm">Follow Me on Social Media</h2>
+            <ul class="scm">
+                <li><img src="https://img.icons8.com/?size=48&id=60469&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=UrgbzHxXKotn&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=yGcWL8copNNQ&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=xuvGCOXi8Wyg&format=png" alt=""></li>
+                <li><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your @ARNMDOCS - Android Developer</p>
+        </div>
+    </footer>
+
+    <script>
+
+      function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = "flex"
+
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = "none"
+
+        }
+
+    </script>
+  </body>
 </html>
